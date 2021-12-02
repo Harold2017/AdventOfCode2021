@@ -15,3 +15,4 @@ function(addExe name src)
 endfunction()
 
 addExe("day_1" day1/count_window_increases.cpp)
+addExe("day_2" day2/position.cpp)
