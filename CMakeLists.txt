@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.17)
+project(AOC2021)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+function(addExe name src)
+    add_executable(${name} ${src})
+    math(EXPR lastIndex "${ARGC} - 1")
+    if (${ARGC} GREATER 2)
+        foreach(index RANGE 2 ${lastIndex})
+            target_link_libraries(${name} ${ARGV${index}})
+        endforeach()
+    endif()
+endfunction()
+
+addExe("day_1" day1/count_window_increases.cpp)
