@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(AOC2021)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 function(addExe name src)
@@ -31,3 +31,4 @@ addExe("day_14" day14/extended_polymerization.cpp)
 addExe("day_15" day15/chiton.cpp)
 addExe("day_16" day16/packet_decoder.cpp)
 addExe("day_17" day17/trick_shot.cpp)
+addExe("day_18" day18/snailfish.cpp)
